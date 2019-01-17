@@ -19,6 +19,7 @@ node default {
 node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp': }
+  inlcude activemq
   $mess = hiera('puppet_is_enabled',true)
   $xx = hiera('ansible_rsa_priv_key',undef)
   notify {"Value is | $xx ":}
