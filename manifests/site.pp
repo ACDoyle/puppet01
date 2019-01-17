@@ -17,7 +17,7 @@ node default {
 }
 
 node web-d-001 {
-  class { '::mcolective':
+  class { '::mcollective':
     middleware_hosts => [ 'web-d-002.example.com' ],
   }
 }
