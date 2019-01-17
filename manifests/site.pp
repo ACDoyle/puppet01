@@ -16,6 +16,11 @@ node default {
  # }
 }
 
+node web-d-001 {
+  class { '::mcolective':
+    middleware_hosts => [ 'web-d-002.example.com' ],
+  }
+}
 node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp': }
